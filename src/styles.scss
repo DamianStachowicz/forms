@@ -1,0 +1,48 @@
+@import "styles/button.scss";
+@import "styles/input.scss";
+@import "styles/modal.scss";
+@import "styles/table.scss";
+
+@font-face {
+  font-family: fira-sans;
+  src: url(assets/fonts/FiraSans-Regular.otf) format("opentype");
+}
+
+$page-background-color: #fbfcff;
+
+body {
+  background-color: $page-background-color;
+  font-family: "fira-sans", sans-serif;
+}
+
+.content-container {
+  padding: 10px;
+}
+
+@media (min-width: 576px) {
+  .content-container {
+    margin: 0 auto;
+    width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    margin: 0 auto;
+    width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-container {
+    margin: 0 auto;
+    width: 990px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    margin: 0 auto;
+    width: 1000px;
+  }
+}

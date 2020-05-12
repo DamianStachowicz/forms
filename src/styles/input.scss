@@ -1,0 +1,68 @@
+$primary-color: #274156;
+$secondary-color: #d0ccd0;
+$tertiary-color: #605856;
+
+.input {
+  height: 1.5rem;
+  padding-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  position: relative;
+  width: 100%;
+
+  & &__placeholder {
+    color: $secondary-color;
+    position: absolute;
+    top: 1.5rem;
+    transition: 0.2s ease-out;
+  }
+
+  & &__control {
+    border: none;
+    font-size: 1rem;
+
+    &--readonly {
+      color: $secondary-color;
+    }
+  }
+
+  &__counter,
+  &__readonly {
+    color: $secondary-color;
+    font-size: 0.8rem;
+    text-align: right;
+    width: 100%;
+  }
+
+  &--active {
+    .input__placeholder {
+      color: $tertiary-color;
+      top: 0;
+    }
+
+    .underline__fill {
+      transform: scaleX(1) !important;
+      transition: 0.2s ease-out;
+    }
+  }
+
+  &--filled {
+    .input__placeholder {
+      color: $tertiary-color;
+      top: 0;
+    }
+  }
+}
+
+.underline {
+  background-color: $secondary-color;
+  display: block;
+  height: 2px;
+  width: 100%;
+
+  & &__fill {
+    background-color: $primary-color;
+    height: 100%;
+    transform: scaleX(0);
+    width: 100%;
+  }
+}

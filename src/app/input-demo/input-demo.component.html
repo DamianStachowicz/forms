@@ -1,0 +1,25 @@
+<div class="content-container">
+  <form [formGroup]="form">
+    <lib-input
+      type="text"
+      placeholder="Login"
+      formControlName="login"
+      [maxlength]="20"
+      [displayMaxLength]="true"
+    >
+    </lib-input>
+    <lib-input
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+    >
+    </lib-input>
+    <lib-input
+      type="text"
+      [readonly]="true"
+      formControlName="testInput"
+      placeholder="readonly"
+    ></lib-input>
+    <button (click)="debug()" class="btn">Submit</button>
+  </form>
+</div>
