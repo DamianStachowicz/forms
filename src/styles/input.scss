@@ -14,11 +14,15 @@ $tertiary-color: #605856;
     position: absolute;
     top: 1.5rem;
     transition: 0.2s ease-out;
+    z-index: 1;
   }
 
   & &__control {
+    background-color: transparent;
     border: none;
     font-size: 1rem;
+    position: relative;
+    z-index: 2;
 
     &--readonly {
       color: $secondary-color;
