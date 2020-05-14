@@ -85,8 +85,6 @@ export class InputComponent implements ControlValueAccessor {
   }
 
   writeValue(value: string) {
-    if (value) {
-      this.innerValue = value;
-    }
+    this.innerValue = value;
   }
 }

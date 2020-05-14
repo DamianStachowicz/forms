@@ -33,5 +33,10 @@ export class InputDemoComponent implements OnInit {
         password: this.form.get('password').valid,
       },
     });
+    this.form.reset({
+      login: '',
+      password: '',
+      testInput: 'This field is read only',
+    });
   }
 }
