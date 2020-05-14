@@ -25,9 +25,9 @@ export class InputComponent implements ControlValueAccessor {
   @Input() type: 'number' | 'text' | 'password' = 'text';
 
   /**
-   * Input placeholder
+   * Input label
    */
-  @Input() placeholder: string;
+  @Input() label: string;
 
   /**
    * Is readonly

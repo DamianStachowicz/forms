@@ -5,7 +5,7 @@
     'input--filled': value
   }"
 >
-  <div class="input__placeholder">{{ placeholder }}</div>
+  <div class="input__label">{{ label }}</div>
   <input
     class="input__control"
     [type]="type"
@@ -19,8 +19,12 @@
   <div class="input__underline underline">
     <div *ngIf="!readonly" class="underline__fill"></div>
   </div>
-  <div *ngIf="displayMaxLength && maxlength" class="input__counter">
-    {{ value?.length }}/{{ maxlength }}
+  <div class="input__counter">
+    <span *ngIf="displayMaxLength && maxlength"
+      >{{ value?.length }}/{{ maxlength }}</span
+    >
   </div>
-  <div *ngIf="readonly" class="input__readonly">read-only</div>
+  <div class="input__readonly">
+    <span *ngIf="readonly">read-only</span>
+  </div>
 </div>
