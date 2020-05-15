@@ -12,7 +12,6 @@ $tertiary-color: #605856;
   & &__label {
     color: $secondary-color;
     transition: 0.2s ease-out;
-    z-index: 1;
   }
 
   & &__control {
@@ -22,7 +21,6 @@ $tertiary-color: #605856;
     margin-top: 2px;
     position: relative;
     width: 100%;
-    z-index: 2;
 
     &--readonly {
       color: $secondary-color;
