@@ -1,0 +1,39 @@
+<div
+  class="select-box"
+  [ngClass]="{
+    'select-box--active': active,
+    'select-box--filled': value
+  }"
+>
+  <div class="select-box__label">{{ label }}</div>
+  <input
+    class="select-box__control"
+    type="text"
+    (focus)="active = true"
+    (input)="filterOptions(inputValue)"
+    [(ngModel)]="inputValue"
+    [maxlength]="maxlength"
+    [readonly]="readonly"
+    [ngClass]="{ 'select-box__control--readonly': readonly }"
+  />
+  <i class="select-box__arrow"></i>
+  <div class="select-box__underline underline">
+    <div *ngIf="!readonly" class="underline__fill"></div>
+  </div>
+  <div class="select-box__list-wrapper list-wrapper">
+    <div class="list-wrapper list">
+      <div
+        class="list__option"
+        [ngClass]="{ 'list__option--highlighted': isHighlighted(option) }"
+        *ngFor="let option of filteredOptions"
+        (click)="select(option)"
+        (mouseenter)="highlight(option)"
+      >
+        {{ option[labelKey] }}
+      </div>
+    </div>
+  </div>
+  <div class="select-box__readonly">
+    <span *ngIf="readonly">read-only</span>
+  </div>
+</div>

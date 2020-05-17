@@ -5,9 +5,10 @@ import { FormsLibModule } from 'projects/forms-lib/src/public-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
+import { SelectBoxDemoComponent } from './select-box-demo/select-box-demo.component';
 
 @NgModule({
-  declarations: [AppComponent, InputDemoComponent],
+  declarations: [AppComponent, InputDemoComponent, SelectBoxDemoComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

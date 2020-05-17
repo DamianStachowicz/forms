@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './input-demo.component.html',
   styleUrls: ['./input-demo.component.scss'],
 })
-export class InputDemoComponent implements OnInit {
+export class InputDemoComponent {
   title = 'forms';
 
   form: FormGroup;
@@ -14,8 +14,6 @@ export class InputDemoComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.createForm();
   }
-
-  ngOnInit() {}
 
   private createForm() {
     this.form = this.formBuilder.group({
