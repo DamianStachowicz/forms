@@ -10,10 +10,15 @@
     class="select-box__control"
     type="text"
     (focus)="active = true"
+    (click)="active = true"
     (input)="filterOptions(inputValue)"
+    (keydown.arrowdown)="moveHighlightDown()"
+    (keydown.arrowup)="moveHighlightUp()"
+    (keydown.esc)="cancel()"
+    (keydown.enter)="select(highlighted)"
     [(ngModel)]="inputValue"
     [maxlength]="maxlength"
-    [readonly]="readonly"
+    [disabled]="readonly"
     [ngClass]="{ 'select-box__control--readonly': readonly }"
   />
   <i class="select-box__arrow"></i>
@@ -37,3 +42,4 @@
     <span *ngIf="readonly">read-only</span>
   </div>
 </div>
+<div class="overlay" (click)="cancel()"></div>

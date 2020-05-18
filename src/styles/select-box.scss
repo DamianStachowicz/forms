@@ -1,3 +1,5 @@
+@import "styles/overlay.scss";
+
 $list-background-color: #fbfcff;
 $primary-color: #274156;
 $secondary-color: #a099a0;
@@ -9,6 +11,7 @@ $tertiary-color: #605856;
   margin-bottom: 5px;
   position: relative;
   width: 100%;
+  z-index: 110;
 
   & &__label {
     color: $secondary-color;

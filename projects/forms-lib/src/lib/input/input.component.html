@@ -13,7 +13,7 @@
     (focus)="active = true"
     [(ngModel)]="value"
     [maxlength]="maxlength"
-    [readonly]="readonly"
+    [disabled]="readonly"
     [ngClass]="{ 'input__control--readonly': readonly }"
   />
   <div class="input__underline underline">

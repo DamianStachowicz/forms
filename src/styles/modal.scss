@@ -1,15 +1,6 @@
-$modal-background-color: #fbfcff;
+@import "styles/overlay.scss";
 
-.overlay {
-  background-color: black;
-  height: 100vh;
-  left: 0;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 100;
-}
+$modal-background-color: #fbfcff;
 
 .modal {
   background-color: $modal-background-color;
