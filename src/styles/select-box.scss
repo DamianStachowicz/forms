@@ -1,6 +1,7 @@
 @import "styles/overlay.scss";
 
 $list-background-color: #fbfcff;
+$list-color: #000000;
 $primary-color: #274156;
 $secondary-color: #a099a0;
 $tertiary-color: #605856;
@@ -108,6 +109,7 @@ $tertiary-color: #605856;
   transition: 0.2s ease-out;
 
   & &__option {
+    color: $list-color;
     padding: 5px;
 
     &--highlighted {

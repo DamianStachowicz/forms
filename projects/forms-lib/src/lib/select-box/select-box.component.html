@@ -42,4 +42,4 @@
     <span *ngIf="readonly">read-only</span>
   </div>
 </div>
-<div class="overlay" (click)="cancel()"></div>
+<div *ngIf="active" class="overlay" (click)="cancel()"></div>

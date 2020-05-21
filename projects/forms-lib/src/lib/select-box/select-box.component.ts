@@ -42,7 +42,7 @@ export class SelectBoxComponent implements OnChanges {
   onTouched: any = () => {};
 
   get value() {
-    return this.innerValue;
+    return this.innerValue || '';
   }
 
   set value(val: string) {
@@ -104,6 +104,6 @@ export class SelectBoxComponent implements OnChanges {
 
   cancel() {
     this.active = false;
-    this.inputValue = this.innerValue[this.labelKey];
+    this.inputValue = !!this.innerValue ? this.innerValue[this.labelKey] : '';
   }
 }
